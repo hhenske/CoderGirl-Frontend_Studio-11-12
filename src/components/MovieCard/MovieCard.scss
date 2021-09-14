@@ -1,0 +1,35 @@
+.moviecard {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: calc(20% - 20px);
+  &:hover .moviecard_wrap {
+    opacity: 1;
+  }
+  &_wrap {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  img {
+    max-width: 100%;
+  }
+}
