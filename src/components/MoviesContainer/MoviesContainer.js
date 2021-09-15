@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import PropTypes from "prop-types";
 
@@ -8,15 +8,7 @@ const MoviesContainer = props => {
   return (
     <main className="movieContainer">
       {movieData.length !== 0
-        ? movieData.map(movie => (
-            <MovieCard
-              key={movie.id}
-              movie={movie}
-              // updateActiveMovieCallback={selectedMovie =>
-              //   setActiveMovie(selectedMovie)
-              // }
-            />
-          ))
+        ? movieData.map(movie => <MovieCard key={movie.id} movie={movie} />)
         : null}
     </main>
   );

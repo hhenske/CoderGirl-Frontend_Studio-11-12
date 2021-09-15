@@ -9,9 +9,6 @@ const movieDataReducer = (state, action) => {
   switch (action.type) {
     case "SET_MOVIES":
       return action.value;
-    case "ADD_MOVIE": {
-      return [...state, action.value];
-    }
     case "FILTER_MOVIES": {
       return action.value.allMovies.filter(movie => {
         const filteredGenres = movie.genre.filter(
@@ -37,7 +34,6 @@ const App = () => {
     )
       .then(response => response.json())
       .then(result => {
-        console.log(result);
         setStaticMovieData(result.movieData);
         dispatchMovieData({ type: "SET_MOVIES", value: result.movieData });
       })
@@ -60,7 +56,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <Header setSidebarOpen={setSidebarOpen} />
       {sidebarOpen && (
         <Sidebar
           genres={GENRES}

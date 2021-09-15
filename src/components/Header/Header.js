@@ -4,7 +4,7 @@ import "./Header.scss";
 import sidebarIcon from "../../assets/sidebarOpen.svg";
 
 const Header = props => {
-  const { sidebarOpen, setSidebarOpen } = props;
+  const { setSidebarOpen } = props;
 
   const handleSidebarOpenClick = () => {
     setSidebarOpen(prevState => !prevState);
@@ -24,7 +24,6 @@ const Header = props => {
 };
 
 Header.propTypes = {
-  sidebarOpen: PropTypes.bool.isRequired,
   setSidebarOpen: PropTypes.func.isRequired,
 };
 
