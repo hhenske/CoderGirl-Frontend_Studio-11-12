@@ -5,7 +5,3 @@ main {
   align-items: center;
   margin: 10px;
 }
-
-main + .sidebar_container {
-  pointer-events: none;
-}

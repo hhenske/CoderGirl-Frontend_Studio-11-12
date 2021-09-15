@@ -4,11 +4,7 @@ import "./Header.scss";
 import sidebarIcon from "../../assets/sidebarOpen.svg";
 
 const Header = props => {
-  const { setSidebarOpen } = props;
-
-  const handleSidebarOpenClick = () => {
-    setSidebarOpen(prevState => !prevState);
-  };
+  const handleSidebarOpenClick = () => {};
   return (
     <header>
       <div className="sidebarIcon">
@@ -23,8 +19,6 @@ const Header = props => {
   );
 };
 
-Header.propTypes = {
-  setSidebarOpen: PropTypes.func.isRequired,
-};
+Header.propTypes = {};
 
 export default Header;
