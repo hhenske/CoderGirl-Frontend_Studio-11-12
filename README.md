@@ -5,7 +5,7 @@ I've also added some practice and new skills for common use cases you'll experie
 
 You are building a Movie Library. You'll first fetch data from a separate source, then display the data in a series of components. You'll also add logic to filter the movies shown based on what genre the user selects.
 
-\*_ADD IMAGE FOR FINAL PROJECT HERE_/
+![Final Project](./images-for-readme/after-MovieCards.png)
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ const { movieData } = props;
 - [ ] Update the `MovieContainer.propTypes` object to type check that the `movieData` value is always an array and is always required.
 - [ ] Check your work - There won't be any visual changes in the DOM, but you can check the React Dev Tools to see if the Movie Container is added and is receiving the movie data as a prop.
 
-**ADD THE MovieContainer_virtual-dom.png **
+![MovieContainer virtual DOM](./images-for-readme/MovieContainer_virtual-dom.png)
 
 ### C - Setting up the Movie Cards
 
@@ -65,7 +65,7 @@ Each `MovieCard` holds one movie. In class 1 of the studio, it's going to show o
 - [ ] Go back to `MovieContainer.js`. Inside the `<main></main>` elements, map over all the movie objects inside the `movieData` array and return JSX that will render the `MovieCard` component. Each component should receive the prop `movie` and get a movie object.
       When this is complete, you should see all 66 movies rendered in your browser! If you hover over a poster, you should see the movie's title and release year.
 
-**ADD after-MovieCards.png **
+![MovieContainer virtual DOM](./images-for-readme/after-MovieCards.png)
 
 ## Part 2 - Setting up the Reducer
 
@@ -100,7 +100,7 @@ So we've initalized `movieData` as an empty array. We couldn't initialize it as 
 - [ ] Update the `movieData` prop being passed to `MovieContainer` to be `movieData`.
 - [ ] Check your work: When this is complete, nothing in the browser should change, because `movieData` and `staticMovieData` currently hold the same data. If you look at your React Dev Tools, inside of `App` you should see there is a value for `state` and a value for `reducer`
 
-** ADD after-creating-reducer.png **
+![MovieContainer virtual DOM](./images-for-readme/after-creating-reducer.png)
 
 ## Part 3 - Setting Up the Sidebar
 
@@ -111,7 +111,7 @@ All these movies are great, but my original intention for making this library wa
 - [ ] First, import the Sidebar component into `App.js` and render `Sidebar` in between `Header` and `MovieContainer`. For now, it will take no props.
       Notice that the sidebar is now open, and prevents you from hovering over the posters. Next we need to create some state to toggle whether or not the sidebar is open
 
-**ADD with-sidebar-open.png **
+![MovieContainer virtual DOM](./images-for-readme/with-sidebar-open.png)
 
 - [ ] Inside of `App` create state via `useState` named `sidebarOpen` and set the initial value to `false`
 - [ ] Inside of the `App` component's return statement, add some logic to the JSX to render the sidebar only if `sidebarOpen` is true. As a reminder, JSX can handle expressions only. You can't use an if statement, but you could use a ternary statement.
