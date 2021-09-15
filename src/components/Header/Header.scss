@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  z-index: 12;
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  background-color: #673ab7;
+  align-items: center;
+  .appTitle {
+    flex-grow: 1;
+    color: #fff;
+    text-align: center;
+  }
+  .sidebarIcon {
+    margin-left: 10px;
+  }
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      border-radius: 50px;
+    }
+  }
+}
